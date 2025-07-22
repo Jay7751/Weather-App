@@ -33,5 +33,17 @@
                 </div>
             </div>
         </div>
+        <script>
+            const apiKey = "30953c2f2297b7a2201fecd0a09274d1";
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=hyderabad";
+
+            async function checkWeather(){
+                const response = await fetch(apiUrl + '&appid=${apiKey}');
+                var data = await response.json();
+
+                console.log(data);
+            }
+
+        </script>
     </body>
 </html>
